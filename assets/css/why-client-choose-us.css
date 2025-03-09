@@ -1,0 +1,133 @@
+/* CSS for "Why our clients choose us" Section */
+.why-clients-section {
+    width: 100%;
+    background-color: white;
+    position: relative;
+    padding: 0;
+    /* margin-top: 80px; Space below navbar */
+  }
+  
+  .why-clients-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+  }
+  
+  .left-column {
+    width: 35%;
+    position: relative;
+    padding: 40px 0 80px 20px;
+  }
+  
+  .sticky-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0e0e0e;
+    position: sticky;
+    top: 150px; /* Increased top spacing to maintain distance from navbar */
+    margin: 0;
+    line-height: 1.2;
+    max-width: 300px;
+    padding-top: 40px;
+  }
+  
+  .right-column {
+    width: 65%;
+    padding: 80px 20px 80px 60px;
+    background-color: rgba(255, 252, 252, 0.753);
+  }
+  
+  .benefit-item {
+    margin-bottom: 120px; /* Increased spacing between items */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .benefit-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .benefit-item:last-child {
+    margin-bottom: 40px;
+  }
+  
+  .benefit-item h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: orange;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .benefit-item p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: black;
+    margin: 0;
+  }
+  
+  /* Animation classes */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 992px) {
+    .why-clients-container {
+      flex-direction: column;
+    }
+  
+    .left-column,
+    .right-column {
+      width: 100%;
+      padding: 40px 20px;
+    }
+  
+    .sticky-heading {
+      position: relative;
+      top: 0;
+      max-width: 100%;
+    }
+  
+    .benefit-item {
+      margin-bottom: 80px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .why-clients-section {
+      margin-top: 60px;
+    }
+  
+    .left-column,
+    .right-column {
+      padding: 30px 20px;
+    }
+  
+    .sticky-heading {
+      font-size: 2rem;
+    }
+  
+    .benefit-item {
+      margin-bottom: 60px;
+    }
+  
+    .benefit-item h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+    }
+  
+    .benefit-item p {
+      font-size: 1rem;
+    }
+  }
